@@ -12,7 +12,7 @@ public class Dishspawner : MonoBehaviour {
     {
         Instantiate(Dish);
         Dish.transform.position = GetComponent<Transform>().position;
-        Dish.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -1);
+        
     }
 
 
