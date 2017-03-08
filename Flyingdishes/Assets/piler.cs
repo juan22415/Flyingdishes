@@ -25,7 +25,7 @@ public class piler : MonoBehaviour {
             for(int i=0;i < pile.Length;i++)
             {
                 pile[i].SetActive(false);
-                current = 0;
+                current = 0; 
             }
        
 
