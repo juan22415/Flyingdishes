@@ -23,5 +23,6 @@ public class Grabdish : MonoBehaviour {
             Destroy(other.gameObject);
             
         }
+       
     } 
 }

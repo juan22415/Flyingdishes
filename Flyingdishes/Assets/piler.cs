@@ -20,5 +20,15 @@ public class piler : MonoBehaviour {
 
 
         }
+        if (other.gameObject.tag == "LavaPlatos")
+        {
+            for(int i=0;i < pile.Length;i++)
+            {
+                pile[i].SetActive(false);
+                current = 0;
+            }
+       
+
+        }
     }
 }
