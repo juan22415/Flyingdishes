@@ -8,7 +8,7 @@ public class piler : MonoBehaviour {
     [SerializeField]
     private GameObject[] pile;
     private float position=0.1f;
-    private int current;
+    public int current;
 
     void OnTriggerEnter2D(Collider2D other)
     {

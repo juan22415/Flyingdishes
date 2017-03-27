@@ -2,59 +2,67 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class character_move : MonoBehaviour {
+public class character_move : MonoBehaviour
+{
 
     private Rigidbody2D char_rigidbody;
     [SerializeField]
-    private float speed=50;
-
+    private float speed = 50;
+    public bool isgrouded;
+    public float touchtime = 0.2f, taptime;
 
     void Start()
     {
         char_rigidbody = GetComponent<Rigidbody2D>();
     }
 
-	void Update () {
+    void Update()
+    {
 
-        
 
-        if (Input.touchCount>0)
+
+        if (Input.touchCount == 1)
         {
             Touch touch = Input.GetTouch(0);
 
+
             if (touch.position.x > Screen.width / 2)
             {
-
-
-                char_rigidbody.velocity = new Vector2(1 * speed, 0);
+                char_rigidbody.velocity = new Vector2(speed, char_rigidbody.velocity.y);
             }
-
             else if (touch.position.x < Screen.width / 2)
             {
-
-                Debug.Log("touchside2");
-                char_rigidbody.velocity = new Vector2(-1 * speed, 0);
+                char_rigidbody.velocity = new Vector2(-speed, char_rigidbody.velocity.y);
             }
 
-            if (touch.phase == TouchPhase.Ended)
-                char_rigidbody.velocity = Vector2.zero;
-        }
 
-
-
-
-
-
-        //float horizontalmove = Input.GetAxis("Horizontal");
-       // move(horizontalmove);
-		
-	}
-
-    private void move(float hmove)
-    {   
-        char_rigidbody.velocity=new Vector2(hmove * speed, 0);
     }
+}
 
-   
+
+
+
+
+
+private void move(float hmove)
+{
+    char_rigidbody.AddForce(new Vector2(hmove * speed, 0));
+}
+
+private void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.gameObject.tag == "ground")
+    {
+        isgrouded = true;
+    }
+}
+
+private void OnCollisionExit2D(Collision2D collision)
+{
+    if (collision.gameObject.tag == "ground")
+    {
+        isgrouded = false;
+    }
+}
 
 }
