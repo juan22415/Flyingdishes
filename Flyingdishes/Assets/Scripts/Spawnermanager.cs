@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawnermanager : MonoBehaviour {
+public class Spawnermanager : Singleton<Spawnermanager>
+{
 
     public GameObject[] spawners;
-    private float timer, maxtime = 5;
+    private float timer;
+    public float maxtime = 5;
     private int current;
 
 

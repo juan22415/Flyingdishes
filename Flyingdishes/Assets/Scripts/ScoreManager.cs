@@ -14,5 +14,9 @@ public class ScoreManager :  Singleton<ScoreManager>
     private void Update()
     {
         scoreText.text = "Score:" + score;
+        if(score==100)
+        {
+            Spawnermanager.Instance.maxtime = 3;
+        }
     }
 }

@@ -20,7 +20,7 @@ public class Grabdish : MonoBehaviour {
         
         if (other.gameObject.tag == "dish")
         {
-            ScoreManager.Instance.score = ScoreManager.Instance.score+10;
+           
             Destroy(other.gameObject);
             
         }

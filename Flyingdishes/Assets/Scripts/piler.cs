@@ -25,7 +25,9 @@ public class piler : MonoBehaviour {
             for(int i=0;i < pile.Length;i++)
             {
                 pile[i].SetActive(false);
-                current = 0; 
+                ScoreManager.Instance.score = ScoreManager.Instance.score + 10*current;
+                current = 0;
+             
             }
        
 
