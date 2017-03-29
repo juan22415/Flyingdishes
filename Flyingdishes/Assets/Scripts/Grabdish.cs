@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Grabdish : MonoBehaviour {
 
+
+    public piler pile;
 	// Use this for initialization
 	void Start () {
 		
@@ -19,9 +21,9 @@ public class Grabdish : MonoBehaviour {
     {
         
         if (other.gameObject.tag == "dish")
-        {
-           
+        {           
             Destroy(other.gameObject);
+            pile.IncreasePile();
             
         }
        
