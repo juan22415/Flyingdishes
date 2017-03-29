@@ -18,5 +18,13 @@ public class ScoreManager :  Singleton<ScoreManager>
         {
             Spawnermanager.Instance.maxtime = 3;
         }
+        if(score==200)
+        {
+            Spawnermanager.Instance.maxtime = 2;
+        }
+        if(score==300)
+        {
+            Spawnermanager.Instance.maxtime = 1;
+        }
     }
 }
