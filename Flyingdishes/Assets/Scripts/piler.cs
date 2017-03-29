@@ -18,7 +18,6 @@ public class piler : MonoBehaviour
         pile[current].SetActive(true);
         current++;
     }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "LavaPlatos")
