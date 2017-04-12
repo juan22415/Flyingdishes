@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreManager :  Singleton<ScoreManager>
 {
     public Text scoreText;
     public int score = 0;
+    public int lifes = 3;
     private void Start()
     {
         
@@ -25,6 +27,11 @@ public class ScoreManager :  Singleton<ScoreManager>
         if(score==300)
         {
             Spawnermanager.Instance.maxtime = 1;
+        }
+
+        if (lifes==0)
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }
