@@ -10,12 +10,13 @@ public class HeadSlow : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Head")
+        if (collision.gameObject.tag == "dish")
           
         {
             Debug.Log("me dio");
             GameController.Instance.SlowSpeed();
             isSlow = true;
+          
         }
 
        
@@ -26,14 +27,15 @@ public class HeadSlow : MonoBehaviour {
         if (isSlow==true)
         {
             StartCoroutine(Example());
-            GameController.Instance.normalSpeed();
+            
             isSlow = false;
         }
     }
     IEnumerator Example()
     {
        
-        yield return new WaitForSeconds(5);
-      
+        yield return new WaitForSeconds(7);
+        Debug.Log("here");
+        GameController.Instance.normalSpeed();
     }
 }

@@ -16,6 +16,11 @@ public class GameController : Singleton<GameController>
     }
     public  void SlowSpeed()
     {
+        if(speed==0)
+        {
+            speed = 1;
+        }
+        else
         speed -= 40f;
     }
     public void normalSpeed()
