@@ -35,7 +35,12 @@ public class character_move : MonoBehaviour
             }
 
 
-    }
+        }
+
+        else
+
+            char_rigidbody.velocity = Vector2.zero;
+
 }
 
 

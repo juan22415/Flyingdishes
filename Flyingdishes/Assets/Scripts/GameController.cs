@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : Singleton<GameController>
 {
-    public float speed = 50f;
+    public float speed = 3;
     bool paused;
 
 
@@ -21,11 +21,11 @@ public class GameController : Singleton<GameController>
             speed = 1;
         }
         else
-        speed -= 40f;
+        speed = speed/2;
     }
     public void normalSpeed()
     {
-        speed = 50f;
+        speed = 3;
     }
     public virtual void SpawnPlayer()
     {
