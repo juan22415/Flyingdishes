@@ -9,9 +9,18 @@ public class GameController : Singleton<GameController>
     bool paused;
 
 
+
     public virtual void PlayerLostLife()
     {
         // deal with player life lost (update U.I. etc.)
+    }
+    public  void SlowSpeed()
+    {
+        speed -= 40f;
+    }
+    public void normalSpeed()
+    {
+        speed = 50f;
     }
     public virtual void SpawnPlayer()
     {

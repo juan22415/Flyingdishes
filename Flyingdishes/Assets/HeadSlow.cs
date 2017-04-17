@@ -8,17 +8,25 @@ public class HeadSlow : MonoBehaviour {
     public float timer=0f;
     public bool isSlow = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        GameController.Instance.speed = GameController.Instance.speed -10 ;
-        isSlow = true;
+        if (collision.gameObject.tag == "Head")
+          
+        {
+            Debug.Log("me dio");
+            GameController.Instance.SlowSpeed();
+            isSlow = true;
+        }
+
+       
     }
     private void Update()
     {
-        if(isSlow==true)
+        
+        if (isSlow==true)
         {
             StartCoroutine(Example());
-            GameController.Instance.speed = 50f;
+            GameController.Instance.normalSpeed();
             isSlow = false;
         }
     }
