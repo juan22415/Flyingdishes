@@ -31,7 +31,7 @@ public class ScoreManager :  Singleton<ScoreManager>
 
         if (lifes==0)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 }
