@@ -6,22 +6,23 @@ public class character_move : MonoBehaviour
 {
 
     private Rigidbody2D char_rigidbody;
-   
+    public Animator anim; 
     public bool isgrouded;
     public float touchtime = 0.2f, taptime;
 
     void Start()
     {
         char_rigidbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        anim.SetBool("isMoving", false);
     }
 
     void Update()
     {
-
-
-
+        
         if (Input.touchCount == 1)
         {
+            anim.SetBool("isMoving", true);
             Touch touch = Input.GetTouch(0);
 
 
