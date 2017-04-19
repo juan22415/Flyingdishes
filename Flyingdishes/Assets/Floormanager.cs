@@ -22,7 +22,7 @@ public class Floormanager : MonoBehaviour {
         {
             Destroy(other.gameObject);
 
-            ScoreManager.Instance.lifes--;
+            ScoreManager.Instance.LoseLifes(1);
         }
 
     }

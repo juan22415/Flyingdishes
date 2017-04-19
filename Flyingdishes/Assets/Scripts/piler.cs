@@ -1,17 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class piler : MonoBehaviour
 {
-
-
     [SerializeField]
     private GameObject[] pile;
     private float position = 0.1f;
     public int current;
-
-
 
     public void IncreasePile()
     {
@@ -25,7 +19,7 @@ public class piler : MonoBehaviour
             for (int i = 0; i < pile.Length; i++)
             {
                 pile[i].SetActive(false);
-                ScoreManager.Instance.score = ScoreManager.Instance.score + 10 * current;
+                ScoreManager.Instance.AddScore(10 * current); //.Score = ScoreManager.Instance.Score + 10 * current;
                 current = 0;
             }
         }

@@ -14,7 +14,7 @@ public class HeadSlow : MonoBehaviour {
           
         {
             Debug.Log("me dio");
-            GameController.Instance.SlowSpeed();
+            GameController1.Instance.SlowSpeed();
             isSlow = true;
           
         }
@@ -36,6 +36,6 @@ public class HeadSlow : MonoBehaviour {
        
         yield return new WaitForSeconds(7);
         Debug.Log("here");
-        GameController.Instance.normalSpeed();
+        GameController1.Instance.normalSpeed();
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : Singleton<GameController>
+public class GameController1 : Singleton<GameController1>
 {
     public float speed = 3;
     bool paused;
@@ -14,14 +14,14 @@ public class GameController : Singleton<GameController>
     {
         // deal with player life lost (update U.I. etc.)
     }
-    public  void SlowSpeed()
+    public void SlowSpeed()
     {
-        if(speed==0)
+        if (speed == 0)
         {
             speed = 1;
         }
         else
-        speed = speed/2;
+            speed = speed / 2;
     }
     public void normalSpeed()
     {
@@ -39,7 +39,7 @@ public class GameController : Singleton<GameController>
     {
         // do start game functions
     }
-  
+
     public virtual void RestartGameButtonPressed()
     {
         // deal with restart button (default behavior re-loads the
@@ -71,4 +71,4 @@ public class GameController : Singleton<GameController>
     }
 }
 
-    
+
