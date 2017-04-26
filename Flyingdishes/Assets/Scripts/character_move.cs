@@ -19,8 +19,23 @@ public class character_move : MonoBehaviour
 
     void Update()
     {
-        
-        if (Input.touchCount == 1)
+
+        if (char_rigidbody.velocity.x>0)
+        {
+            anim.SetInteger("movedirection", 1);
+        }
+
+        else if (char_rigidbody.velocity.x < 0)
+        {
+            anim.SetInteger("movedirection", -1);
+        }
+
+        else if (char_rigidbody.velocity.x == 0)
+        {
+            anim.SetBool("isMoving", false);
+        }
+
+            if (Input.touchCount == 1)
         {
             anim.SetBool("isMoving", true);
             Touch touch = Input.GetTouch(0);
@@ -28,10 +43,12 @@ public class character_move : MonoBehaviour
 
             if (touch.position.x > Screen.width / 2)
             {
+                
                 char_rigidbody.velocity = new Vector2(GameController1.Instance.speed, char_rigidbody.velocity.y);
             }
             else if (touch.position.x < Screen.width / 2)
             {
+                
                 char_rigidbody.velocity = new Vector2(-GameController1.Instance.speed, char_rigidbody.velocity.y);
             }
 
@@ -41,8 +58,9 @@ public class character_move : MonoBehaviour
         else
 
             char_rigidbody.velocity = Vector2.zero;
+            
 
-}
+    }
 
 
 
