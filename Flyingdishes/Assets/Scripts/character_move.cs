@@ -6,32 +6,50 @@ public class character_move : MonoBehaviour
 {
 
     private Rigidbody2D char_rigidbody;
-   
+    public Animator anim; 
     public bool isgrouded;
     public float touchtime = 0.2f, taptime;
 
     void Start()
     {
         char_rigidbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        anim.SetBool("isMoving", false);
     }
 
     void Update()
     {
 
-
-
-        if (Input.touchCount == 1)
+        if (char_rigidbody.velocity.x>0)
         {
+            anim.SetInteger("movedirection", 1);
+        }
+
+        else if (char_rigidbody.velocity.x < 0)
+        {
+            anim.SetInteger("movedirection", -1);
+        }
+
+        else if (char_rigidbody.velocity.x == 0)
+        {
+            anim.SetBool("isMoving", false);
+        }
+
+            if (Input.touchCount == 1)
+        {
+            anim.SetBool("isMoving", true);
             Touch touch = Input.GetTouch(0);
 
 
             if (touch.position.x > Screen.width / 2)
             {
-                char_rigidbody.velocity = new Vector2(GameController.Instance.speed, char_rigidbody.velocity.y);
+                
+                char_rigidbody.velocity = new Vector2(GameController1.Instance.speed, char_rigidbody.velocity.y);
             }
             else if (touch.position.x < Screen.width / 2)
             {
-                char_rigidbody.velocity = new Vector2(-GameController.Instance.speed, char_rigidbody.velocity.y);
+                
+                char_rigidbody.velocity = new Vector2(-GameController1.Instance.speed, char_rigidbody.velocity.y);
             }
 
 
@@ -40,8 +58,9 @@ public class character_move : MonoBehaviour
         else
 
             char_rigidbody.velocity = Vector2.zero;
+            
 
-}
+    }
 
 
 
@@ -50,7 +69,7 @@ public class character_move : MonoBehaviour
 
 private void move(float hmove)
 {
-    char_rigidbody.AddForce(new Vector2(hmove * GameController.Instance.speed, 0));
+    char_rigidbody.AddForce(new Vector2(hmove * GameController1.Instance.speed, 0));
 }
 
 private void OnCollisionEnter2D(Collision2D collision)

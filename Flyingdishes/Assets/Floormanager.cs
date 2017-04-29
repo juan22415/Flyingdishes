@@ -1,28 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Floormanager : MonoBehaviour {
+public class Floormanager : MonoBehaviour
+{
+    public AudioClip shootSound;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+  
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+     
 
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnCollisionEnter2D (Collision2D other)
     {
 
         if (other.gameObject.tag == "dish")
         {
+            float vol = UnityEngine.Random.Range(volLowRange, volHighRange);
+            source.PlayOneShot(shootSound, vol);
             Destroy(other.gameObject);
 
-            ScoreManager.Instance.lifes--;
+            ScoreManager.Instance.LoseLifes(1);
         }
 
     }
