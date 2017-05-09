@@ -88,4 +88,14 @@ private void OnCollisionExit2D(Collision2D collision)
     }
 }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Pick Up"))
+        {
+            other.gameObject.SetActive(false);
+            ScoreManager.Instance.AddScore(100);
+            Debug.Log("pickup");
+        }
+    }
+
 }
