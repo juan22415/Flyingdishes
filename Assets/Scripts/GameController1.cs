@@ -21,7 +21,7 @@ public class GameController1 : Singleton<GameController1>
             speed = 1;
         }
         else
-            speed = speed / 2;
+            speed = speed / 1.5f;
     }
     public void normalSpeed()
     {

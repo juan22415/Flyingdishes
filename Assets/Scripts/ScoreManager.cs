@@ -11,20 +11,28 @@ public class ScoreManager : Singleton<ScoreManager>
     {
         score += value;
 
-        scoreText.text = "Score:" + score;
+        scoreText.text = "$:" + score;
+        switch (score)
+        {
+            case 100:
+                Spawnermanager.Instance.maxtime = 3;
+                break;
+            case 200:
+                Spawnermanager.Instance.maxtime = 2.8f;
+                break;
+            case 300:
+                Spawnermanager.Instance.maxtime = 2.7f;
+                break;
+            case 400:
+                Spawnermanager.Instance.maxtime = 2.6f;
+                break;
+            case 500:
+                Spawnermanager.Instance.maxtime = 2.5f;
+                break;
+            default:
+                break;
+        }
 
-        if (score == 100)
-        {
-            Spawnermanager.Instance.maxtime = 3;
-        }
-        if (score == 200)
-        {
-            Spawnermanager.Instance.maxtime = 2;
-        }
-        if (score == 300)
-        {
-            Spawnermanager.Instance.maxtime = 1;
-        }
 
         if (lifes == 0)
         {
