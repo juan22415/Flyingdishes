@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController1 : Singleton<GameController1>
 {
     public float speed = 3;
-    bool paused;
+   
 
 
 
@@ -46,29 +46,7 @@ public class GameController1 : Singleton<GameController1>
         // currently loaded scene)
         SceneManager.LoadScene(1);
     }
-    public bool Paused
-    {
-        get
-        {
-            // get paused
-            return paused;
-        }
-        set
-        {
-            // set paused
-            paused = value;
-            if (paused)
-            {
-                // pause time
-                Time.timeScale = 0f;
-            }
-            else
-            {
-                // unpause Unity
-                Time.timeScale = 1f;
-            }
-        }
-    }
+   
 }
 
 

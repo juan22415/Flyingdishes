@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeadSlow : MonoBehaviour
 {
-
+    ParticleSystem hitParticles;
     public AudioClip shootSound;
     private AudioSource source;
     private float volLowRange = .5f;
@@ -14,6 +14,7 @@ public class HeadSlow : MonoBehaviour
     public bool isSlow = false;
     private void Awake()
     {
+        hitParticles = GetComponentInChildren<ParticleSystem>();
         source = GetComponent<AudioSource>();
     }
 
@@ -23,6 +24,7 @@ public class HeadSlow : MonoBehaviour
 
         {
             Debug.Log("me dio");
+            hitParticles.Play();
             GameController1.Instance.SlowSpeed();
             isSlow = true;
             float vol = UnityEngine.Random.Range(volLowRange, volHighRange);
