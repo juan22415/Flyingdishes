@@ -11,7 +11,7 @@ public class ScoreManager : Singleton<ScoreManager>
     {
         score += value;
 
-        scoreText.text = "     " + score;
+        scoreText.text = "" + score;
         switch (score)
         {
             case 100:
