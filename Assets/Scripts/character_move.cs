@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class character_move : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class character_move : MonoBehaviour
 
     void Update()
     {
-
+    
+      
         if (char_rigidbody.velocity.x>0)
         {
             anim.SetInteger("movedirection", 1);

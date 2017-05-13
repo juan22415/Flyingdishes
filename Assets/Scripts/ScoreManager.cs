@@ -6,7 +6,13 @@ public class ScoreManager : Singleton<ScoreManager>
     public Text scoreText;
     private int score = 0;
     private int lifes = 3;
-
+    private void Update()
+    {
+        if (Nolifes())
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
     public void AddScore(int value)
     {
         score += value;
@@ -34,12 +40,17 @@ public class ScoreManager : Singleton<ScoreManager>
         }
 
 
-        if (lifes == 0)
-        {
-            SceneManager.LoadScene(1);
-        }
+      
     }
-
+    public bool Nolifes()
+    {
+       
+        if(lifes==0)
+        {
+            return true;
+        }
+        return false;
+    }
     public void LoseLifes(int value)
     {
         lifes -= value;
