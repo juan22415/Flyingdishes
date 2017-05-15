@@ -24,7 +24,7 @@ namespace CompleteProject
         // kProductIDSubscription - it has custom Apple and Google identifiers. We declare their store-
         // specific mapping to Unity Purchasing's AddProduct, below.
         public static string Gold50 = "gold50";
-        public static string RemoveAds = "remove_ads";
+
 
         void Start()
         {
@@ -51,8 +51,7 @@ namespace CompleteProject
             // Add a product to sell / restore by way of its identifier, associating the general identifier
             // with its store-specific identifiers.
             builder.AddProduct(Gold50, ProductType.Consumable);
-            // Continue adding the non-consumable product.
-            builder.AddProduct(RemoveAds, ProductType.NonConsumable);
+
 
             // Kick off the remainder of the set-up with an asynchrounous call, passing the configuration 
             // and this class' instance. Expect a response either in OnInitialized or OnInitializeFailed.
@@ -69,11 +68,6 @@ namespace CompleteProject
         public void Buy50Gold()
         {
             BuyProductID(Gold50);
-        }
-
-        public void BuyRemoveAds()
-        {
-            BuyProductID(RemoveAds);
         }
 
         private void BuyProductID(string productId)
@@ -141,11 +135,7 @@ namespace CompleteProject
                 Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
             }
             // Or ... a non-consumable product has been purchased by this user.
-            else if (String.Equals(args.purchasedProduct.definition.id, RemoveAds, StringComparison.Ordinal))
-            {
-                Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
-                // TODO: The non-consumable item has been successfully purchased, grant this item to the player.
-            }
+
             // Or ... an unknown product has been purchased by this user. Fill in additional products here....
             else
             {
