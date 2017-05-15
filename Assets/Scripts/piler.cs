@@ -9,6 +9,10 @@ public class piler : MonoBehaviour
 
     public void IncreasePile()
     {
+        if(current==4)
+        {
+            return;
+        }
         pile[current].SetActive(true);
         current++;
     }

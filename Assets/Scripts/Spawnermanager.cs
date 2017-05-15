@@ -13,6 +13,17 @@ public class Spawnermanager : Singleton<Spawnermanager>
 
     private void Update()
     { 
+        if (current ==4)
+        {
+            current = 0;
+            timer = 0;
+            spawners[0].SetActive(false);
+            spawners[1].SetActive(false);
+            spawners[2].SetActive(false);
+            spawners[3].SetActive(false);
+            spawners[4].SetActive(false);
+         
+        }
     timer += Time.deltaTime;        
         if (timer > maxtime)
         {
