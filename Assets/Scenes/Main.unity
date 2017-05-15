@@ -4094,7 +4094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.44000015
+  m_Length: 0.44000012
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 496000535}
   m_AttachedIK: {fileID: 1892271421}
@@ -4692,7 +4692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.4500005
+  m_Length: 0.45000026
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1021541101}
   m_AttachedIK: {fileID: 1037496430}
@@ -5657,7 +5657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.44900882
+  m_Length: 0.449009
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1498336955}
   m_AttachedIK: {fileID: 680814064}
@@ -5690,7 +5690,7 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 6a93b25dde78a744ebc0ac56af30ea6d, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -5702,10 +5702,10 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 65
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 134
-    m_Alignment: 1
+    m_BestFit: 1
+    m_MinSize: 65
+    m_MaxSize: 70
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -6007,7 +6007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.4700005
+  m_Length: 0.47000042
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 441237302}
   m_AttachedIK: {fileID: 2077672861}
@@ -6982,7 +6982,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d8120089a06e6294c8ed454a0bcaed28, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4439a628cece1a048b328d4ca0502e24, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8882,7 +8882,6 @@ MonoBehaviour:
   dish2: {fileID: 68370257}
   dish3: {fileID: 1124933169}
   scoreText: {fileID: 992962780}
-  lifesText: {fileID: 0}
   score: 0
   lifes: 3
   speed: 3
