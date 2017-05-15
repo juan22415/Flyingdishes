@@ -4,14 +4,14 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  productGUID: 6cf872b1c8c38924d898d2f329670012
+  productGUID: bcb0290d14c66c84eb2468f4f78bbd13
   AndroidProfiler: 0
-  defaultScreenOrientation: 0
+  defaultScreenOrientation: 4
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Flyingdishes
+  productName: Flying dishes
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
@@ -118,7 +118,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1.8
+  bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -135,21 +135,15 @@ PlayerSettings:
       depthFormat: 1
   protectGraphicsMemory: 0
   useHDRDisplay: 0
-  applicationIdentifier:
-    Android: com.Insanebever.flyingishes
-    Standalone: unity.DefaultCompany.Flyingdishes
-    Tizen: com.Insanebever.flyingishes
-    iOS: com.Insanebever.flyingishes
-    tvOS: com.Insanebever.flyingishes
-  buildNumber:
-    iOS: 0
+  applicationIdentifier: {}
+  buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
-  iPhoneStrippingLevel: 1
+  iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
   ForceInternetPermission: 0
   ForceSDCardPermission: 0
@@ -216,8 +210,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Manu/Desktop/Semestre 6/keys/user.keystore
-  AndroidKeyaliasName: keystore
+  AndroidKeystoreName: 
+  AndroidKeyaliasName: 
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
@@ -227,33 +221,7 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons:
-  - m_BuildTarget: Android
-    m_Icons:
-    - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b67578dd72bbd3d418f310fa972b7140, type: 3}
-      m_Width: 192
-      m_Height: 192
-    - serializedVersion: 2
-      m_Icon: {fileID: 0}
-      m_Width: 144
-      m_Height: 144
-    - serializedVersion: 2
-      m_Icon: {fileID: 0}
-      m_Width: 96
-      m_Height: 96
-    - serializedVersion: 2
-      m_Icon: {fileID: 0}
-      m_Width: 72
-      m_Height: 72
-    - serializedVersion: 2
-      m_Icon: {fileID: 0}
-      m_Width: 48
-      m_Height: 48
-    - serializedVersion: 2
-      m_Icon: {fileID: 0}
-      m_Width: 36
-      m_Height: 36
+  m_BuildTargetIcons: []
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   m_BuildTargetVRSettings: []
@@ -532,14 +500,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Flyingdishes
+  metroPackageName: Flying dishes
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Flyingdishes
+  metroApplicationDescription: Flying dishes
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -564,7 +532,7 @@ PlayerSettings:
   tizenGPSPermissions: 0
   tizenMicrophonePermissions: 0
   tizenDeploymentTarget: 
-  tizenDeploymentTargetType: 0
+  tizenDeploymentTargetType: -1
   tizenMinOSVersion: 1
   n3dsUseExtSaveData: 0
   n3dsCompressStaticMem: 1
@@ -610,13 +578,11 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled:
-    Collab: 1
-    UNet: 1
+  cloudServicesEnabled: {}
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 1c9b0e31-31a9-4e03-9b20-e975d4b9fb13
-  projectName: Flyingdishes
-  organizationId: insane-beaver
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNewInputSystem: 0

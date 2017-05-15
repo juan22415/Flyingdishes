@@ -13,18 +13,12 @@ public class Manager : MonoBehaviour
     public Image dish2;
     public Image dish3;
 
-    public Image bdish1;
-    public Image bdish2;
-    public Image bdish3;
-
-
-    public Sprite dish1sprite;
-    public Sprite dish2sprite;
     public Text scoreText;
 
     public int score = 0;
     public int lifes = 3;
     public float speed = 3;
+    public int multiplicador = 1;
 
     void Awake()
     {
@@ -69,7 +63,7 @@ public class Manager : MonoBehaviour
     }
     public void AddScore(int value)
     {
-        score += value;
+        score += value * multiplicador;
 
         scoreText.text = "" + score;
         switch (score)
@@ -96,7 +90,16 @@ public class Manager : MonoBehaviour
 
 
     }
-
+    IEnumerator Example()
+    {
+        yield return new WaitForSeconds(7);
+        speed = 3;
+    }
+    public void EfectoCafe()
+    {
+        speed = 4;
+        StartCoroutine(Example());
+    }
     public void LoseLifes(int value)
     {
         if (lifes == 3)
