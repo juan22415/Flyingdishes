@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Manager :MonoBehaviour
+public class Manager : MonoBehaviour
 {
 
     public static Manager Instance { get; private set; }
@@ -12,16 +12,24 @@ public class Manager :MonoBehaviour
     public Image dish1;
     public Image dish2;
     public Image dish3;
-   
+
+    public Image bdish1;
+    public Image bdish2;
+    public Image bdish3;
+
+
+    public Sprite dish1sprite;
+    public Sprite dish2sprite;
     public Text scoreText;
-   
-    public int score=0;
-    public int lifes=3;
-    public float speed=3;
+
+    public int score = 0;
+    public int lifes = 3;
+    public float speed = 3;
 
     void Awake()
     {
-       
+
+
         if (Instance)
         {
             DestroyImmediate(gameObject);
@@ -32,6 +40,11 @@ public class Manager :MonoBehaviour
             //DontDestroyOnLoad(gameObject);
         }
     }
+    private void Start()
+    {
+
+    }
+
     public void SlowSpeed()
     {
 
@@ -46,10 +59,10 @@ public class Manager :MonoBehaviour
     {
         speed = 3;
     }
-   
+
     private void Update()
     {
-        if (lifes==0)
+        if (lifes == 0)
         {
             SceneManager.LoadScene(1);
         }
@@ -83,19 +96,28 @@ public class Manager :MonoBehaviour
 
 
     }
-  
+
     public void LoseLifes(int value)
     {
-        if(lifes==3)
+        if (lifes == 3)
         {
-            dish3.enabled = false;
+
+            dish1.enabled = false;
+
+
         }
-        if(lifes==2)
+        if (lifes == 2)
         {
             dish2.enabled = false;
+
+        }
+        if (lifes == 1)
+        {
+            dish3.enabled = false;
+
         }
         lifes -= value;
-       
-      
+
+
     }
 }
