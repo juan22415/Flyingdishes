@@ -25,7 +25,7 @@ public class HeadSlow : MonoBehaviour
         {
             Debug.Log("me dio");
             hitParticles.Play();
-            GameController1.Instance.SlowSpeed();
+            Manager.Instance.SlowSpeed();
             isSlow = true;
             float vol = UnityEngine.Random.Range(volLowRange, volHighRange);
             source.PlayOneShot(shootSound, vol);
@@ -49,6 +49,6 @@ public class HeadSlow : MonoBehaviour
 
         yield return new WaitForSeconds(7);
 
-        GameController1.Instance.normalSpeed();
+        Manager.Instance.normalSpeed();
     }
 }

@@ -19,7 +19,7 @@ public class piler : MonoBehaviour
             for (int i = 0; i < pile.Length; i++)
             {
                 pile[i].SetActive(false);
-                ScoreManager.Instance.AddScore(10 * current); //.Score = ScoreManager.Instance.Score + 10 * current;
+                Manager.Instance.AddScore(10 * current); //.Score = ScoreManager.Instance.Score + 10 * current;
                 current = 0;
             }
         }

@@ -46,12 +46,12 @@ public class character_move : MonoBehaviour
             if (touch.position.x > Screen.width / 2)
             {
                 
-                char_rigidbody.velocity = new Vector2(GameController1.Instance.speed, char_rigidbody.velocity.y);
+                char_rigidbody.velocity = new Vector2(Manager.Instance.speed, char_rigidbody.velocity.y);
             }
             else if (touch.position.x < Screen.width / 2)
             {
                 
-                char_rigidbody.velocity = new Vector2(-GameController1.Instance.speed, char_rigidbody.velocity.y);
+                char_rigidbody.velocity = new Vector2(-Manager.Instance.speed, char_rigidbody.velocity.y);
             }
 
 
@@ -71,7 +71,7 @@ public class character_move : MonoBehaviour
 
 private void move(float hmove)
 {
-    char_rigidbody.AddForce(new Vector2(hmove * GameController1.Instance.speed, 0));
+    char_rigidbody.AddForce(new Vector2(hmove * Manager.Instance.speed, 0));
 }
 
 private void OnCollisionEnter2D(Collision2D collision)
@@ -95,7 +95,7 @@ private void OnCollisionExit2D(Collision2D collision)
         if (other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
-            ScoreManager.Instance.AddScore(100);
+            Manager.Instance.AddScore(100);
             Debug.Log("pickup");
         }
     }

@@ -1,14 +1,52 @@
-﻿using UnityEngine.SceneManagement;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ScoreManager : Singleton<ScoreManager>
+public class Manager :MonoBehaviour
 {
+
+    public static Manager Instance { get; private set; }
+
+
+   
     public Text scoreText;
-    private int score = 0;
-    private int lifes = 3;
+   
+    public int score=0;
+    public int lifes=3;
+    public float speed=3;
+
+    void Awake()
+    {
+        if (Instance)
+        {
+            DestroyImmediate(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            //DontDestroyOnLoad(gameObject);
+        }
+    }
+    public void SlowSpeed()
+    {
+
+        if (speed == 0)
+        {
+            speed = 1;
+        }
+        else
+            speed = speed / 1.5f;
+    }
+    public void normalSpeed()
+    {
+        speed = 3;
+    }
+   
     private void Update()
     {
-        if (Nolifes())
+        if (lifes==0)
         {
             SceneManager.LoadScene(1);
         }
@@ -40,12 +78,12 @@ public class ScoreManager : Singleton<ScoreManager>
         }
 
 
-      
+
     }
     public bool Nolifes()
     {
-       
-        if(lifes==0)
+
+        if (lifes == 0)
         {
             return true;
         }

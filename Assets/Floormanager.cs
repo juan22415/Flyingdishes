@@ -24,7 +24,7 @@ public class Floormanager : MonoBehaviour
             source.PlayOneShot(shootSound, vol);
             Destroy(other.gameObject);
 
-            ScoreManager.Instance.LoseLifes(1);
+            Manager.Instance.LoseLifes(1);
         }
 
     }
