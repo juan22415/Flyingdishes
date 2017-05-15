@@ -9,16 +9,19 @@ public class Manager :MonoBehaviour
 
     public static Manager Instance { get; private set; }
 
-
+    public Image dish1;
+    public Image dish2;
+    public Image dish3;
    
     public Text scoreText;
-   
+    public Text lifesText;
     public int score=0;
     public int lifes=3;
     public float speed=3;
 
     void Awake()
     {
+        lifesText.text = "" + lifes;
         if (Instance)
         {
             DestroyImmediate(gameObject);
@@ -80,17 +83,19 @@ public class Manager :MonoBehaviour
 
 
     }
-    public bool Nolifes()
-    {
-
-        if (lifes == 0)
-        {
-            return true;
-        }
-        return false;
-    }
+  
     public void LoseLifes(int value)
     {
+        if(lifes==3)
+        {
+            dish3.enabled = false;
+        }
+        if(lifes==2)
+        {
+            dish2.enabled = false;
+        }
         lifes -= value;
+       
+        lifesText.text = "" + lifes;
     }
 }

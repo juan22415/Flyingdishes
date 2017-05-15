@@ -9,7 +9,7 @@ public class character_move : MonoBehaviour
     private Rigidbody2D char_rigidbody;
     public Animator anim; 
     public bool isgrouded;
-    public float touchtime = 0.2f, taptime;
+    public float touchtime = 0.2f;
 
     void Start()
     {
