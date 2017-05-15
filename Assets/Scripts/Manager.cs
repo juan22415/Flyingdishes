@@ -14,14 +14,14 @@ public class Manager :MonoBehaviour
     public Image dish3;
    
     public Text scoreText;
-    public Text lifesText;
+   
     public int score=0;
     public int lifes=3;
     public float speed=3;
 
     void Awake()
     {
-        lifesText.text = "" + lifes;
+       
         if (Instance)
         {
             DestroyImmediate(gameObject);
@@ -96,6 +96,6 @@ public class Manager :MonoBehaviour
         }
         lifes -= value;
        
-        lifesText.text = "" + lifes;
+      
     }
 }
