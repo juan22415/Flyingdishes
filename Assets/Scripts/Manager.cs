@@ -58,6 +58,8 @@ public class Manager : MonoBehaviour
     {
         if (lifes == 0)
         {
+            PlayerPrefs.SetInt("Scorefile", score);
+            //score = PlayerPrefs.GetInt("Scorefile");
             SceneManager.LoadScene(1);
         }
     }
