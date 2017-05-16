@@ -607,14 +607,14 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
     Build: 0
-    Collab: 0
+    Collab: 1
     ErrorHub: 0
     Hub: 0
-    UNet: 0
+    UNet: 1
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: 1c9b0e31-31a9-4e03-9b20-e975d4b9fb13
+  projectName: Flyingdishes
+  organizationId: insane-beaver
   cloudEnabled: 0
   enableNewInputSystem: 0

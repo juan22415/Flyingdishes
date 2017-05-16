@@ -4484,7 +4484,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 496000534}
-  m_LocalRotation: {x: 0, y: 0, z: -0.50498426, w: 0.86312854}
+  m_LocalRotation: {x: 0, y: 0, z: -0.5049845, w: 0.8631285}
   m_LocalPosition: {x: 0.44, y: -0.00000020861626, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4549,7 +4549,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553973394}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.48, y: -2.88, z: 0}
+  m_LocalPosition: {x: 0.98, y: 3.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1219157921}
@@ -4858,7 +4858,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0.7232277, w: 0.6906097}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 0.133, y: -0.6589999, z: 0}
+    targetPosition: {x: 0.753, y: -0.6589999, z: 0}
     flip: 0
 --- !u!4 &680814065
 Transform:
@@ -5945,7 +5945,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954042815}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.95, y: -2.93, z: 0}
+  m_LocalPosition: {x: -3.28, y: 3.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1219157921}
@@ -6499,7 +6499,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0.027448015, w: 0.9996233}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -0.849, y: -2.7199998, z: 0}
+    targetPosition: {x: -0.229, y: -2.7199998, z: 0}
     flip: 0
 --- !u!4 &1037496431
 Transform:
@@ -7956,7 +7956,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1567589115}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21, y: -3.08, z: 0}
+  m_LocalPosition: {x: 0.41, y: -3.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1055273318}
@@ -8053,7 +8053,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0028899312, y: 0.37442523}
+  m_Offset: {x: -0.40743363, y: 0.37442523}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8064,7 +8064,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.99422014, y: 0.13822138}
+  m_Size: {x: 1.0982897, y: 0.13822138}
   m_EdgeRadius: 0
 --- !u!82 &1567589122
 AudioSource:
@@ -8954,7 +8954,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1818341577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.63, y: -2.88, z: 0}
+  m_LocalPosition: {x: -1.13, y: 3.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1219157921}
@@ -9130,11 +9130,11 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 496000535}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: -0.50498426, w: 0.86312854}
+      solverRotation: {x: 0, y: 0, z: -0.50498444, w: 0.8631284}
       defaultLocalRotation: {x: 0, y: 0, z: -0.69237906, w: 0.721534}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -1.4360001, y: -0.6589999, z: 0}
+    targetPosition: {x: -0.8160001, y: -0.6589999, z: 0}
     flip: 1
 --- !u!4 &1892271422
 Transform:
@@ -9646,7 +9646,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0, w: 1}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -0.384, y: -2.7519999, z: 0}
+    targetPosition: {x: 0.236, y: -2.7519999, z: 0}
     flip: 1
 --- !u!1 &2095827078
 GameObject:
