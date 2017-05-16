@@ -32,6 +32,8 @@ namespace GooglePlayGames.BasicApi
         /// <summary>
         /// The default configuration.
         /// </summary>
+        /// 
+
         public static readonly PlayGamesClientConfiguration DefaultConfiguration =
             new Builder()
            .Build();
@@ -284,9 +286,9 @@ namespace GooglePlayGames.BasicApi
 
             public Builder RequestServerAuthCode(bool forceRefresh)
             {
-              mRequestAuthCode = true;
-              mForceRefresh = forceRefresh;
-              return this;
+                mRequestAuthCode = true;
+                mForceRefresh = forceRefresh;
+                return this;
             }
 
             public Builder RequestEmail()
@@ -401,8 +403,9 @@ namespace GooglePlayGames.BasicApi
             /// Gets the Oauth scopes to be requested from the user.
             /// </summary>
             /// <returns>String array of scopes.</returns>
-            internal string[] getScopes() {
-                return mScopes == null? new string[0] : mScopes.ToArray();
+            internal string[] getScopes()
+            {
+                return mScopes == null ? new string[0] : mScopes.ToArray();
             }
 
             /// <summary>

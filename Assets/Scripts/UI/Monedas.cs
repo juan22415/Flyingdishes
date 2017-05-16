@@ -15,7 +15,7 @@ public class Monedas : MonoBehaviour
     void Start()
     {
 
-        scoreText.text = "Coins:" + score;
+        scoreText.text = "" + score;
     }
 
     // Update is called once per frame
