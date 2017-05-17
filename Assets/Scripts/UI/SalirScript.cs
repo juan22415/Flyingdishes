@@ -25,6 +25,7 @@ public class SalirScript : MonoBehaviour {
     }
     public void OnClickSalir()
     {
+        PlayerPrefs.SetInt("Scorefile", Manager.Instance.score);
         Application.Quit();
     }
    

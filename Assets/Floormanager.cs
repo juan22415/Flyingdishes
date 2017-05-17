@@ -26,6 +26,17 @@ public class Floormanager : MonoBehaviour
 
             Manager.Instance.LoseLifes(1);
         }
-
+        if(other.gameObject.tag=="Multiplicador")
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "Cafe")
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "Pick Up")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

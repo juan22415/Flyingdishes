@@ -30,4 +30,5 @@ public class Spawner : MonoBehaviour
         // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
         Instantiate(pickUp, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     }
+
 }

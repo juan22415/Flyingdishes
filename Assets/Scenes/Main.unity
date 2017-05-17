@@ -3942,7 +3942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUp: {fileID: 1397344622794092, guid: d12982498e9f6c6499b03cdc593815a6, type: 2}
-  spawnTime: 10
+  spawnTime: 60
   spawnPoints:
   - {fileID: 954042816}
   - {fileID: 1818341578}
@@ -4758,7 +4758,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 0}
+      propertyPath: Pan2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 1d819c48dab601547aeb0b76a071438b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &646211656
@@ -4969,6 +4979,7 @@ MonoBehaviour:
   - {fileID: 798398980}
   current: 0
   shootSound: {fileID: 8300000, guid: 32c1be0624da9124492b6739c6fe8cf5, type: 3}
+  ding: {fileID: 8300000, guid: 1c1783a4e895ec94eb4b7305c3a26a64, type: 3}
 --- !u!4 &768957847
 Transform:
   m_ObjectHideFlags: 0
@@ -5033,7 +5044,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -1
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -7241,7 +7252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUp: {fileID: 1048548628139130, guid: e8571fe7747a6d848b1fdfe66fc2ae40, type: 2}
-  spawnTime: 30
+  spawnTime: 100
   spawnPoints:
   - {fileID: 954042816}
   - {fileID: 1818341578}
@@ -8226,6 +8237,7 @@ MonoBehaviour:
   - {fileID: 2133377382}
   current: 0
   shootSound: {fileID: 8300000, guid: 32c1be0624da9124492b6739c6fe8cf5, type: 3}
+  ding: {fileID: 8300000, guid: 1c1783a4e895ec94eb4b7305c3a26a64, type: 3}
 --- !u!82 &1570276201
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8247,7 +8259,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: 1
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -9521,7 +9533,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 12.839328
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

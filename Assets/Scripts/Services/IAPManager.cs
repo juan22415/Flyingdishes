@@ -3,30 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
-// Placing the Purchaser class in the CompleteProject namespace allows it to interact with ScoreManager, 
-// one of the existing Survival Shooter scripts.
-namespace CompleteProject
-{
+
     // Deriving the Purchaser class from IStoreListener enables it to receive messages from Unity Purchasing.
     public class IAPManager : MonoBehaviour, IStoreListener
     {
-        private static IStoreController m_StoreController;          // The Unity Purchasing system.
-        private static IExtensionProvider m_StoreExtensionProvider; // The store-specific Purchasing subsystems.
+        public static IAPManager Instance { get; set; }
+        private static IStoreController m_StoreController;          
+        private static IExtensionProvider m_StoreExtensionProvider; 
+        public static string gold50 = "50oro";
+        public static string gold100 = "100oro";
 
-        // Product identifiers for all products capable of being purchased: 
-        // "convenience" general identifiers for use with Purchasing, and their store-specific identifier 
-        // counterparts for use with and outside of Unity Purchasing. Define store-specific identifiers 
-        // also on each platform's publisher dashboard (iTunes Connect, Google Play Developer Console, etc.)
-
-        // General product identifiers for the consumable, non-consumable, and subscription products.
-        // Use these handles in the code to reference which product to purchase. Also use these values 
-        // when defining the Product Identifiers on the store. Except, for illustration purposes, the 
-        // kProductIDSubscription - it has custom Apple and Google identifiers. We declare their store-
-        // specific mapping to Unity Purchasing's AddProduct, below.
-        public static string Gold50 = "gold50";
-
-
-        void Start()
+    private void Awake()
+    {
+        Instance = this;
+    }
+    void Start()
         {
             // If we haven't set up the Unity Purchasing reference
             if (m_StoreController == null)
@@ -50,8 +41,8 @@ namespace CompleteProject
 
             // Add a product to sell / restore by way of its identifier, associating the general identifier
             // with its store-specific identifiers.
-            builder.AddProduct(Gold50, ProductType.Consumable);
-
+            builder.AddProduct(gold50, ProductType.Consumable);
+            builder.AddProduct(gold100, ProductType.Consumable);
 
             // Kick off the remainder of the set-up with an asynchrounous call, passing the configuration 
             // and this class' instance. Expect a response either in OnInitialized or OnInitializeFailed.
@@ -67,7 +58,12 @@ namespace CompleteProject
 
         public void Buy50Gold()
         {
-            BuyProductID(Gold50);
+            BuyProductID(gold50);
+        }
+
+        public void Buy100Gold()
+        {
+            BuyProductID(gold100);
         }
 
         private void BuyProductID(string productId)
@@ -102,12 +98,7 @@ namespace CompleteProject
                 Debug.Log("BuyProductID FAIL. Not initialized.");
             }
         }
-
-
-        //  
-        // --- IStoreListener
-        //
-
+        
         public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
         {
             // Purchasing has succeeded initializing. Collect our Purchasing references.
@@ -118,33 +109,29 @@ namespace CompleteProject
             // Store specific subsystem, for accessing device-specific store features.
             m_StoreExtensionProvider = extensions;
         }
-
-
         public void OnInitializeFailed(InitializationFailureReason error)
         {
             // Purchasing set-up has not succeeded. Check error for reason. Consider sharing this reason with the user.
             Debug.Log("OnInitializeFailed InitializationFailureReason:" + error);
         }
-
-
         public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args)
         {
             // A consumable product has been purchased by this user.
-            if (String.Equals(args.purchasedProduct.definition.id, Gold50, StringComparison.Ordinal))
+            if (String.Equals(args.purchasedProduct.definition.id, gold50, StringComparison.Ordinal))
             {
-                Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
-            }
-            // Or ... a non-consumable product has been purchased by this user.
+                Debug.Log("Compraste 50 de oro");
 
-            // Or ... an unknown product has been purchased by this user. Fill in additional products here....
+            }
+            else if(String.Equals(args.purchasedProduct.definition.id, gold100, StringComparison.Ordinal))
+            {
+                Debug.Log("Compraste 100 de oro");
+         
+        }
             else
             {
                 Debug.Log(string.Format("ProcessPurchase: FAIL. Unrecognized product: '{0}'", args.purchasedProduct.definition.id));
             }
 
-            // Return a flag indicating whether this product has completely been received, or if the application needs 
-            // to be reminded of this purchase at next app launch. Use PurchaseProcessingResult.Pending when still 
-            // saving purchased products to the cloud, and when that save is delayed. 
             return PurchaseProcessingResult.Complete;
         }
 
@@ -156,4 +143,3 @@ namespace CompleteProject
             Debug.Log(string.Format("OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}", product.definition.storeSpecificId, failureReason));
         }
     }
-}

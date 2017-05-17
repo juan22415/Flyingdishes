@@ -8,6 +8,7 @@ public class piler : MonoBehaviour
     public int current;
 
     public AudioClip shootSound;
+    public AudioClip ding;
     private AudioSource source;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
@@ -41,11 +42,14 @@ public class piler : MonoBehaviour
     {
         if (other.gameObject.tag == "LavaPlatos")
         {
+            float vol = Random.Range(volLowRange, volHighRange);
+            source.PlayOneShot(ding, vol);
             for (int i = 0; i < pile.Length; i++)
             {
                 pile[i].SetActive(false);
                 Manager.Instance.AddScore(10 * current); //.Score = ScoreManager.Instance.Score + 10 * current;
                 current = 0;
+               
             }
         }
     }

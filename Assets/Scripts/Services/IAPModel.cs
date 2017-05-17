@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Monedas : MonoBehaviour
-{
+public class IAPModel : MonoBehaviour {
     public int score;
     public Text scoreText;
-    // Use this for initialization
     private void Awake()
     {
         score = PlayerPrefs.GetInt("Scorefile");
@@ -19,8 +17,19 @@ public class Monedas : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update () {
+		
+	}
+    public void Gold50()
     {
-
+        IAPManager.Instance.Buy50Gold();
+        score += 50;
+        scoreText.text = "" + score;
+    }
+    public void Gold100()
+    {
+        IAPManager.Instance.Buy100Gold();
+        score += 100;
+        scoreText.text = "" + score;
     }
 }

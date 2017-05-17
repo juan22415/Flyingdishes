@@ -118,7 +118,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.3
+  bundleVersion: 0.4
   preloadedAssets: []
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -211,7 +211,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Manu/Desktop/Semestre 6/keys/user.keystore
+  AndroidKeystoreName: C:/Users/user/Desktop/Semestre 6/keys/user.keystore
   AndroidKeyaliasName: keystore
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
