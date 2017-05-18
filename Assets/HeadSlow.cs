@@ -27,7 +27,8 @@ public class HeadSlow : MonoBehaviour
             hitParticles.Play();
             Manager.Instance.SlowSpeed();
             isSlow = true;
-            float vol = UnityEngine.Random.Range(volLowRange, volHighRange);
+            float vol = Random.Range(volLowRange, volHighRange);
+            Manager.Instance.LoseLifes(1);
             source.PlayOneShot(shootSound, vol);
             Destroy(collision.gameObject);
         }

@@ -37,8 +37,7 @@ public class Manager : MonoBehaviour
     private void Start()
     {
 
-    }
-
+    } 
     public void SlowSpeed()
     {
 
@@ -56,10 +55,11 @@ public class Manager : MonoBehaviour
 
     private void Update()
     {
+        PlayerPrefs.SetInt("Scorefile", score);
         if (lifes == 0)
         {
             PlayerPrefs.SetInt("Scorefile", score);
-            //score = PlayerPrefs.GetInt("Scorefile");
+            score = PlayerPrefs.GetInt("Scorefile");
             SceneManager.LoadScene(1);
         }
     }
@@ -85,6 +85,36 @@ public class Manager : MonoBehaviour
             case 500:
                 Spawnermanager.Instance.maxtime = 2.5f;
                 break;
+            case 600:
+                Spawnermanager.Instance.maxtime = 2.4f;
+                break;
+            case 700:
+                Spawnermanager.Instance.maxtime = 2.3f;
+                break;
+            case 800:
+                Spawnermanager.Instance.maxtime = 2.2f;
+                break;
+            case 900:
+                Spawnermanager.Instance.maxtime = 2.1f;
+                break;
+            case 1000:
+                Spawnermanager.Instance.maxtime = 2f;
+                speed = speed+1;
+                break;
+            case 1100:
+                Spawnermanager.Instance.maxtime = 1.9f;
+                break;
+            case 1200:
+                Spawnermanager.Instance.maxtime = 1.8f;
+                break;
+            case 1300:
+                Spawnermanager.Instance.maxtime = 1.7f;
+                speed = speed + 1;
+                break;
+            case 1400:
+                Spawnermanager.Instance.maxtime = 1f;
+                speed = speed + 1;
+                break;
             default:
                 break;
         }
@@ -99,7 +129,7 @@ public class Manager : MonoBehaviour
     }
     public void EfectoCafe()
     {
-        speed = 4;
+        speed = speed+1;
         StartCoroutine(Example());
     }
     public void LoseLifes(int value)

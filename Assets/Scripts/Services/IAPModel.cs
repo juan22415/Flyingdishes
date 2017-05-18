@@ -11,6 +11,13 @@ public class IAPModel : MonoBehaviour {
     {
         Instance = this;
         score = PlayerPrefs.GetInt("Scorefile");
+        
+
+
+    }
+    private void Update()
+    {
+        PlayerPrefs.SetInt("Scorefile", score);
     }
     void Start()
     {
@@ -20,29 +27,31 @@ public class IAPModel : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
-      
-    }
+  
     public void ShowScore()
     {
+      
         scoreText.text = "" + score;
     }
     public void Gold50()
     {
-        score =score+ 50;
-        
-        ShowScore();
+      
         IAPManager.Instance.Buy50Gold();
-        PlayerPrefs.SetInt("Scorefile",score);
+
+        IAPModel.Instance.score += 50;
+        IAPModel.Instance.ShowScore();
+
+
 
     }
     public void Gold100()
     {
-        score =score+ 100;
-   
-        ShowScore();
+        IAPModel.Instance.score += 100;
+        IAPModel.Instance.ShowScore();
+       
         IAPManager.Instance.Buy100Gold();
-        PlayerPrefs.SetInt("Scorefile", score);
-
+     
+    
+       
     }
 }

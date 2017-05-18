@@ -21,11 +21,12 @@ public class SalirScript : MonoBehaviour {
     }
     public void OnClick()
     {
+
         SceneManager.LoadScene(0);
     }
     public void OnClickSalir()
     {
-        PlayerPrefs.SetInt("Scorefile", Manager.Instance.score);
+       
         Application.Quit();
     }
    

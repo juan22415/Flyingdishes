@@ -120,12 +120,13 @@ using UnityEngine.Purchasing;
             if (String.Equals(args.purchasedProduct.definition.id, gold50, StringComparison.Ordinal))
             {
                 Debug.Log("Compraste 50 de oro");
+         
 
             }
             else if(String.Equals(args.purchasedProduct.definition.id, gold100, StringComparison.Ordinal))
             {
                 Debug.Log("Compraste 100 de oro");
-         
+
         }
             else
             {
