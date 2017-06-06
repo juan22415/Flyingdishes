@@ -198,7 +198,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 6ceb7f5acfbdd6244ac47d03e74e41ae, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
@@ -4276,7 +4276,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 3ac5a558da604b64895d900d7da881dc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
@@ -5383,7 +5383,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 0b097533a7fe20c41874c17da8f9fa27, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
@@ -6942,7 +6942,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 2123ea25e675bdd4f8b141d8280cbcae, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
@@ -7868,7 +7868,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 2d572e033585d234980d906d1db7f3da, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
@@ -8193,7 +8193,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 8b0d8015ae4a853478e961f12fe8474d, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
@@ -9101,7 +9101,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 71936b264d0d94d438bfe16725b60983, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
@@ -9198,7 +9198,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 15351925db1398f40a8b8c62b1e2f873, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
@@ -9656,7 +9656,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: c9cf649e99ca5ac46bd5d73dc65d17c9, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
